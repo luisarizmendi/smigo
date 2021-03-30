@@ -1,9 +1,0 @@
-org/smigo/user/AllMessagesSetTest.class
-org/smigo/logging/LogbackLearningTest.class
-org/smigo/JdbcTestDao.class
-org/smigo/species/KitchenGardenAidDataTest.class
-org/smigo/species/SpeciesTestConfiguration.class
-org/smigo/TestDao.class
-org/smigo/SeleniumTest.class
-org/smigo/TestConfiguration.class
-org/smigo/SandboxTest.class
