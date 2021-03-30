@@ -1,0 +1,46 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-8">
+            <div class="page-header text-center">
+                <h1 so-msg="msg.forum"></h1>
+            </div>
+
+            <div ng-if="user.currentUser">
+                <form name="addMessageForm" role="form" ng-submit="addMessage(addMessageForm,message)" novalidate="">
+                    <div class="has-error">
+                        <span ng-repeat="error in objectErrors" class="help-block">{{error.rejectedValue}} : {{error.defaultMessage | translate}}</span>
+                    </div>
+
+                    <!--#### Text ####-->
+                    <div class="form-group">
+                        <textarea type="text" name="text" class="form-control" ng-model="message.text"/>
+                        <span ng-show="addMessageForm.content.$invalid" class="help-block">{{'invalid'}}</span>
+                    </div>
+
+                    <!--#### Save button ####-->
+                    <div class="form-group">
+                        <button id="submit-account-button" type="submit" class="btn btn-default" so-msg="save"></button>
+                        <img ng-if="addMessageForm.pendingAddMessage" ng-src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2-spinner.gif"/>
+                    </div>
+
+                </form>
+            </div>
+            <hr/>
+
+            <div ng-repeat="m in messages">
+                <div>
+                    <a href="/gardener/{{m.submitter}}">{{m.submitter}}</a> {{m.createdate}}
+                </div>
+                <div ng-bind-html="m.text">
+                </div>
+                <hr/>
+
+            </div>
+            <button class="btn btn-default" ng-if="hasMoreMessages" ng-class="{disabled:pendingGetMore}" ng-click="getMoreMessages(messages,pagination)" so-msg="msg.more"></button>
+            <img ng-if="pendingGetMore" ng-src="http://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2-spinner.gif"/>
+        </div>
+    </div>
+
+    <div ng-include="'footer.html'"></div>
+</div>
