@@ -21,6 +21,7 @@ prod.properties
 static/target/
 web/catalina.base_IS_UNDEFINED/
 web/target/
+target/
 
 .idea/
 .svn/

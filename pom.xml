@@ -3,7 +3,6 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.smigo</groupId>
     <artifactId>smigo</artifactId>
-    <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
     <name>smigo</name>
     <url>http://maven.apache.org</url>
@@ -69,6 +68,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
+                <configuration>
+                    <uberJar>true</uberJar>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
