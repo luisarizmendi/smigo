@@ -53,7 +53,7 @@ import java.util.List;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {"org.smigo"})
-@EnableScheduling
+// @EnableScheduling
 public class WebConfiguration extends WebMvcConfigurerAdapter {
 
     private final Logger log = LoggerFactory.getLogger(this.getClass());
