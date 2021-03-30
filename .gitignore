@@ -21,7 +21,12 @@ prod.properties
 static/target/
 web/catalina.base_IS_UNDEFINED/
 web/target/
+
+.vscode/
 target/
+.settings/
+.gitignore
+.project
 
 .idea/
 .svn/
