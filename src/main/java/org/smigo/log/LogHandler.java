@@ -144,7 +144,7 @@ public class LogHandler {
                 ret.append("<td nowrap>");
                 Object column = row.get(columnName);
                 if (column instanceof Boolean) {
-                    ret.append(((Boolean) column) ? "✓" : "");
+                    ret.append(((Boolean) column) ? "ok" : "");
                 } else {
                     ret.append(column);
                 }
