@@ -52,17 +52,7 @@
             <p><spring:message code="msg.front.desc3b"/></p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2><spring:message code="msg.front.headvideo"/></h2>
-            <p><spring:message code="msg.front.descvideo"/></p>
-
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe style="border-radius: 5px;" src="https://www.youtube.com/embed/3HhEkv2oLzA" class="embed-responsive-item" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-    <jsp:include page="nav-bottom.jsp"/>
+     <jsp:include page="nav-bottom.jsp"/>
 </div>
 <c:if test="${empty param['hide-nav']}">
     </body>
